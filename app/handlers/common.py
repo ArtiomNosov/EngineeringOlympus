@@ -5,10 +5,8 @@ from aiogram.dispatcher.filters import Text, IDFilter
 async def cmd_start(message: types.Message, state: FSMContext):
     await state.finish()
     await message.answer(
-        'Выберите, что хотите сделать: Заполнить анкету (/form) ' 
-        'или Изменить анкету (/edit).'
-        'или Получить контакт (/coffee)'
-        'или Получить FAQ (/faq)'
+        'Выберите, что хотите сделать: Получить курс одной валюты в другой (/exchange_rate) ' 
+        'или Получить FAQ (/faq) '
         'или Обратиться в техническую поддержку (/support)',
         reply_markup=types.ReplyKeyboardRemove()
     )
