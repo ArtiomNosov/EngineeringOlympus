@@ -10,6 +10,7 @@ from app.handlers.exchange_rate import register_handlers_exchange_rate
 from app.handlers.faq import register_handlers_faq
 from app.handlers.support import register_handlers_support
 from app.handlers.common import register_hendlers_common
+from app.handlers.materials import register_handlers_materials
 
 # from app.db.functions import create_tables_if_not_exists, save_message_to_db, save_psychological_state_to_db, save_conditional_branch_to_db, get_psychological_state_id, get_chat_conditional_branches_from_db
 
@@ -19,7 +20,8 @@ async def set_commands(bot: Bot):
     commands = [
         # BotCommand(command='/form', description='Заполнить анкету'),
         # BotCommand(command='/edit', description='Отредактировать анкету'),
-        BotCommand(command='/exchange_rate', description='Получить курсы валют и материалов'),
+        BotCommand(command='/exchange_rate', description='Получить курсы валют'),
+        BotCommand(command='/materials', description='Получить цены материалов'),
         BotCommand(command='/faq', description='Ответы на часто задаваемые вопросы'),
         BotCommand(command='/support', description='Техническая поддрежка'),
     ]
@@ -45,6 +47,7 @@ async def main():
     register_handlers_exchange_rate(dp) # TODO
     register_handlers_faq(dp)
     register_handlers_support(dp)
+    register_handlers_materials(dp)
 
     # Установка команд бота
     await set_commands(bot)

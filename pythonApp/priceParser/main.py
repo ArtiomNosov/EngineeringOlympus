@@ -3,7 +3,7 @@ import requests
 from typing import Optional
 import logging
 
-from base import RedisConnection
+from .base import RedisConnection
 
 class Parse():
     def parse():
@@ -97,10 +97,10 @@ class Parser():
 source = "CBRF"
 value = "USDRUB"
 
-if __name__ == "__main__":
-    outer = Parser()
-    print(outer.parseOutside("METALTORG", "CASTIRON"))
-    print("we are here, program works fine")
+# if __name__ == "__main__":
+#     outer = Parser()
+#     print(outer.parseOutside("METALTORG", "CASTIRON"))
+#     print("we are here, program works fine")
     #      outer.parseOutside("CBRF", "USDRUB"),
     #)
 #r.set(source, 'home', 86400)

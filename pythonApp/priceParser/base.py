@@ -7,7 +7,7 @@ import logging
 class RedisConnection():
     def __init__(self) -> None:
         load_dotenv()
-        self.r = redis.StrictRedis(host='localhost',port=6379,db=0,password=os.getenv('REDIS_PASSWORD'))
+        self.r = redis.StrictRedis(host='localhost',port=6379,db=0,password="sOmE_sEcUrE_pAsS")
 
     def get(self, key : str) -> Optional[bytes]:
         try:
