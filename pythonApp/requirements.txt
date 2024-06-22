@@ -17,5 +17,5 @@ redis==5.0.1
 requests==2.32.2
 six==1.16.0
 soupsieve==2.5
-urllib3==2.2.0
+urllib3==2.2.2
 yarl==1.9.4
